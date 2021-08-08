@@ -78,11 +78,3 @@ flow.run(name='Chris')
 
 # note: with the functional API, the upstream_tasks keyword arg can be used to define state-dependencies
 # note: you can switch between the functional API and the imperative API at any time
-
-
-## Orchestrating flows
-from prefect import Client
-
-client = Client()
-client.create_project(project_name="first_project")
-flow.register(project_name="first_project")
