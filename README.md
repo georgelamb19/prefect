@@ -2,6 +2,6 @@
 
 The code introduces Prefect, a workflow management system.
 
-Users organise Tasks into Flows, and Prefect takes care of the rest.
+We use Prefect to define Tasks, organise these into Flows, and manage the execution of these Flows.
 
 We loosely follow the 'First Steps' and 'Next Steps' sections of the Prefect Core docs.
