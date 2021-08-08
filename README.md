@@ -1,7 +1,7 @@
 # prefect
 
-The code introduces Prefect, a workflow management system.
+The code introduces [Prefect](https://docs.prefect.io/), a workflow management system.
 
-We use Prefect to define Tasks, organise these into Flows, and manage the execution of these Flows.
+With Prefect we build pipelines by defining `Tasks` and organising them into `Flows`.
 
-We loosely follow the 'First Steps' and 'Next Steps' sections of the Prefect Core docs.
+We loosely follow the 'First Steps' and 'Next Steps' sections of the Prefect Core [docs](https://docs.prefect.io/core/).
