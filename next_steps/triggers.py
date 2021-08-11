@@ -4,7 +4,7 @@
 # solution is a concept called triggers:
 # - before a task runs, its trigger function is called on a set of upstream task states
 # - task runs if trigger function passes
-# - Prefect has built in triggers: all_successful (default), all_failed, any_successful, any_field, manual_only
+# - Prefect has built in triggers: all_successful (default), all_failed, any_successful, any_failed, manual_only
 
 # REFERENCE TASKS
 # Flows remain in a 'Running' state until all of their tasks enter 'Finished' states
