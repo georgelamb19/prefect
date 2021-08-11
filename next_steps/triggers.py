@@ -6,6 +6,11 @@
 # - task runs if trigger function passes
 # - Prefect has built in triggers: all_successful (default), all_failed, any_successful, any_field, manual_only
 
+# REFERENCE TASKS
+# Flows remain in a 'Running' state until all of their tasks enter 'Finished' states
+# A Flow decided its own final state by applying an all_successful trigger to its reference tasks
+# By default, the reference tasks are the terminal tasks, but users can customise
+
 from prefect import task, Flow, Parameter, triggers
 
 # define tasks
@@ -36,9 +41,12 @@ with Flow("Spark") as flow:
     # wait for the job to finish before tearing down the cluster
     result.set_upstream(submitted)
 
+# use run_spark_job task as reference task
+flow.set_reference_tasks([submitted])
+
 flow.run(name='Simon')
 
 # note: a trigger function evaluates both data and non-data dependencies
-# for example, if the create_cluster task above were to fail:
+# for example, if the create_cluster task above were also to fail:
 # - run_spark_job would have final state 'TriggerFailed'
 # - tear_down_cluster could have final state 'Failed'
