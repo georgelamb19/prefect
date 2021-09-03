@@ -1,8 +1,6 @@
-# this script contains a reference implementation that solves our problem
-
-
 import aircraftlib as aclib
 
+# this script contains a reference implementation that solves our problem
 
 def main():
     # Get the live aircraft vector data around Dulles airport
