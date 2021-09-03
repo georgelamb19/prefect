@@ -131,4 +131,4 @@ dmypy.json
 # Added by GL
 .DS_Store
 .idea
-.sqlite
+*.sqlite
